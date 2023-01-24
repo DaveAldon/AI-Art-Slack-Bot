@@ -27,9 +27,9 @@ app.command("/art", async ({ body, ack }) => {
     artResponseUnparsed.serverResponse
   ) as ArtResponse;
 
+  // This lets us take the four images from the api, and place them in a 2x2 grid
   const canvas = Canvas.createCanvas(512, 512);
   const ctx = canvas.getContext("2d");
-
   for (let i = 0; i < 4; i++) {
     const image = images[i];
     const buffer = Buffer.from(image, "base64");
@@ -42,6 +42,7 @@ app.command("/art", async ({ body, ack }) => {
 
   const image = await canvas.encode("png");
 
+  // Slack doesn't let us embed base64 images into messages, so we have to upload them as files
   app.client.files.upload({
     token: SLACK_BOT_TOKEN,
     channels: body.channel_id,

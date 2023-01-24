@@ -17,7 +17,7 @@ export const callStableDiffusionService = async (
     cfg_scale: 7,
     seed: -1,
     batch_size: numImages,
-    //negative_prompt: negativePrompts,
+    //negative_prompt: "add your own negative prompts to stop the model from generating certain undesired characteristics"
   };
 
   const response = await Promise.race([
