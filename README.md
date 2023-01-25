@@ -55,9 +55,9 @@ Next, we'll create a very simple Slack application using Typescript. This bot wi
 git clone https://github.com/DaveAldon/AI-Art-Slack-Bot
 ```
 
-2. Inside this repo, install the dependencies with a quick `npm install`. Then create an `.env` file that matches the `.env.example` file. For the `BACKEND_URL` field, add your Stable Diffusion server's IP address and port like this: `http://<IP>:7861`. The API runs on port 7861 by default.
+3. Inside this repo, install the dependencies with a quick `npm install`. Then create an `.env` file that matches the `.env.example` file. For the `BACKEND_URL` field, add your Stable Diffusion server's IP address and port like this: `http://<IP>:7861`. The API runs on port 7861 by default.
 
-3. Go to the [Slack application dashboard](https://api.slack.com/apps), and create a new app *from an app manifest*. This will make configuration easier.
+4. Go to the [Slack application dashboard](https://api.slack.com/apps), and create a new app *from an app manifest*. This will make configuration easier.
 
 ![Slack App Dashboard](./resources/newapp.png)
 
@@ -90,11 +90,11 @@ settings:
 
 We need the `files:write` permission, which can be different from ordinary Slack bots, because of how we'll upload our photos into the channel.
 
-4. Install to a workspace
+5. Install to a workspace
 
 Press the `Install App to Workspace` button, and authorize the bot to be installed in your workspace.
 
-5. Retrieve the needed tokens
+6. Retrieve the needed tokens
 
 Go to *App-Level Tokens* in your bot's settings page, and add a new one with whatever name you want, and the `connection:write` scope. This will be used to send messages to the channel. Place this token in your `.env` file as `SLACK_APP_TOKEN`.
 
@@ -104,7 +104,7 @@ Lastly, we need to generate an OAuth token. Go to `Install App` and copy the `Bo
 
 ![OAuth Tokens](./resources/token2.png)
 
-6. Run the bot, and test it out in a channel in your workspace
+7. Run the bot, and test it out in a channel in your workspace
 
 ```bash
 npm run start
