@@ -1,6 +1,6 @@
 # How to Create an AI Art Generating Slack Bot in 10 Minutes
 
-AI art generation has been exploding in the last year, and the once difficult to manage tools are now incredibly easy to use, modular, and versatile. Last year I created a Discord bot that generated AI art from my own privately hosted DALL-E 2 public model. This was quite cumbersome to setup, and it wasn't very flexible if I wanted to make small changes. After exploring what's changed in the last year, I can confidently say that all of my pain points have been resolved by the latest iteration of art generation: [Stable Diffusion](https://stablediffusionweb.com/). I wanted to share how easy it truly is to create your own AI art generating Slack bot. I chose Slack this time, because at Michigan Labs we use Slack as our communication tool, so it's a little more relevant to our own work. But there is a lot of overlap between Slack and Discord, if you're using their respective Typescript libraries. With that said, start your timer, because this should only take about 10 minutes (as long as your internet speed is fast enough!).
+AI art generation has been exploding in the last year, and the once difficult to manage tools are now incredibly easy to use, modular, and versatile. Last year I created a Discord bot that generated AI art from my own privately hosted DALL-E 2 public model. This was quite cumbersome to setup, and it wasn't very flexible if I wanted to make small changes. After exploring what's changed in the last year, I can confidently say that all of my pain points have been resolved by the latest iteration of art generation: [Stable Diffusion](https://stablediffusionweb.com/). In this post, I wanted to share how easy it truly is to create your own AI art generating Slack bot. I chose Slack this time, because at Michigan Labs we use Slack as our communication tool, so it's a little more relevant to our own work. But there is a lot of overlap between Slack and Discord, if you're using their respective Typescript libraries. With that said, start your timer, because this should only take about 10 minutes (as long as your internet speed is fast enough!).
 
 ### Requirements
 
@@ -16,7 +16,7 @@ You can use Linux or Apple Silicon, but it's a bit easier (with respect to NVIDI
 
 Next, you'll need to install a couple dependencies and activate a new Slack application.
 
-##### 1. The Stable Diffusion Web UI
+#### The Stable Diffusion Web UI
 
 [This](https://github.com/AUTOMATIC1111/stable-diffusion-webui) is a project that gives us more than what we're trying to accomplish, but that's a good thing! It's highly extensible, with tons of options for adding more models and customizations. It can also provide a really great web frontend to interact with your hosted model. For our Slack bot purposes however, follow these steps to get it ready for a different interface:
 
@@ -41,7 +41,7 @@ call webui.bat
 
 3. Run `webui-user.bat` and the server should start up in a command prompt window
 
-##### 3. The Slack Bot
+#### The Slack Bot
 
 Next, we'll create a very simple Slack application using Typescript. This bot will be invoked in a Slack channel by typing `/art <PROMPT>`, and the bot will reply with the result from our Stable Diffusion model.
 
