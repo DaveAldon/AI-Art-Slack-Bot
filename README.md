@@ -1,4 +1,6 @@
-# How to Create an AI Art Generating Slack Bot in 10 Minutes
+# Make an AI Art Generating Slack Bot in 10 Minutes
+
+![Banner](./resources/banner.png)
 
 AI art generation has been exploding in the last year, and the once difficult to manage tools are now incredibly easy to use, modular, and versatile. Last year I created a Discord bot that generated AI art from my own privately hosted DALL-E 2 public model. This was quite cumbersome to setup, and it wasn't very flexible if I wanted to make small changes. After exploring what's changed in the last year, I can confidently say that all of my pain points have been resolved by the latest iteration of art generation: [Stable Diffusion](https://stablediffusionweb.com/). In this post, I wanted to share how easy it truly is to create your own AI art generating Slack bot. I chose Slack this time, because at Michigan Labs we use Slack as our communication tool, so it's a little more relevant to our own work. But there is a lot of overlap between Slack and Discord, if you're using their respective Typescript libraries. With that said, start your timer, because this should only take about 10 minutes (as long as your internet speed is fast enough!).
 
