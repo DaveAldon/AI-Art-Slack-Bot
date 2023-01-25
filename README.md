@@ -47,14 +47,15 @@ To verify that it's running properly, try going to `<IP_ADDRESS>:7861/docs` in a
 
 Next, we'll create a very simple Slack application using Typescript. This bot will be invoked in a Slack channel by typing `/art <PROMPT>`, and the bot will reply with the result from our Stable Diffusion model.
 
-1. Clone my [bare-bones Typescript Slack bot template](https://github.com/DaveAldon/AI-Art-Slack-Bot) to follow along quicker. Make sure you have [Node.js](https://nodejs.org/en/) installed.
+1. Make sure you have [Node.js](https://nodejs.org/en/) installed
+
+2. Clone my [bare-bones Typescript Slack bot template](https://github.com/DaveAldon/AI-Art-Slack-Bot) to follow along quicker
 
 ```bash
 git clone https://github.com/DaveAldon/AI-Art-Slack-Bot
-npm install
 ```
 
-2. Inside this repo, create an `.env` file that matches the `.env.example` file. For the `BACKEND_URL` field, add your Stable Diffusion server's IP address and port like this: `http://<IP>:7861`. The API runs on port 7861 by default.
+2. Inside this repo, install the dependencies with a quick `npm install`. Then create an `.env` file that matches the `.env.example` file. For the `BACKEND_URL` field, add your Stable Diffusion server's IP address and port like this: `http://<IP>:7861`. The API runs on port 7861 by default.
 
 3. Go to the [Slack application dashboard](https://api.slack.com/apps), and create a new app *from an app manifest*. This will make configuration easier.
 
