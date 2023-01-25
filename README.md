@@ -41,6 +41,8 @@ call webui.bat
 
 3. Run `webui-user.bat` and the server should start up in a command prompt window
 
+To verify that it's running properly, try going to `<IP_ADDRESS>:7861/docs` in a browser. You should see a Swagger UI page.
+
 #### The Slack Bot
 
 Next, we'll create a very simple Slack application using Typescript. This bot will be invoked in a Slack channel by typing `/art <PROMPT>`, and the bot will reply with the result from our Stable Diffusion model.
